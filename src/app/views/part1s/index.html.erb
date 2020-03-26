@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Part1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ans1</th>
+      <th>Ans2</th>
+      <th>Ans3</th>
+      <th>Ans4</th>
+      <th>Ans5</th>
+      <th>Ans6</th>
+      <th>Ans7</th>
+      <th>Ans8</th>
+      <th>Ans9</th>
+      <th>Ans10</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @part1s.each do |part1| %>
+      <tr>
+        <td><%= part1.ans1 %></td>
+        <td><%= part1.ans2 %></td>
+        <td><%= part1.ans3 %></td>
+        <td><%= part1.ans4 %></td>
+        <td><%= part1.ans5 %></td>
+        <td><%= part1.ans6 %></td>
+        <td><%= part1.ans7 %></td>
+        <td><%= part1.ans8 %></td>
+        <td><%= part1.ans9 %></td>
+        <td><%= part1.ans10 %></td>
+        <td><%= part1.ans1 + part1.ans2 + part1.ans3 + part1.ans4 + part1.ans5 +
+          part1.ans6 + part1.ans7 + part1.ans8 + part1.ans9 + part1.ans10 %></td>
+        <td><%= link_to 'Show', part1 %></td>
+        <td><%= link_to 'Edit', edit_part1_path(part1) %></td>
+        <td><%= link_to 'Destroy', part1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Part1', new_part1_path %>
