@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Part3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ans1</th>
+      <th>Ans2</th>
+      <th>Ans3</th>
+      <th>Ans4</th>
+      <th>Ans5</th>
+      <th>Ans6</th>
+      <th>Ans7</th>
+      <th>Ans8</th>
+      <th>Ans9</th>
+      <th>Ans10</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @part3s.each do |part3| %>
+      <tr>
+        <td><%= part3.ans1 %></td>
+        <td><%= part3.ans2 %></td>
+        <td><%= part3.ans3 %></td>
+        <td><%= part3.ans4 %></td>
+        <td><%= part3.ans5 %></td>
+        <td><%= part3.ans6 %></td>
+        <td><%= part3.ans7 %></td>
+        <td><%= part3.ans8 %></td>
+        <td><%= part3.ans9 %></td>
+        <td><%= part3.ans10 %></td>
+        <td><%= link_to 'Show', part3 %></td>
+        <td><%= link_to 'Edit', edit_part3_path(part3) %></td>
+        <td><%= link_to 'Destroy', part3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Part3', new_part3_path %>
