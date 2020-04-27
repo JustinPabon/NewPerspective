@@ -1,0 +1,185 @@
+<%= form_with(model: part5, local: true) do |form| %>
+  <% if part5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(part5.errors.count, "error") %> prohibited this part5 from being saved:</h2>
+
+      <ul>
+        <% part5.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>41) A person with diabilities has issues entering or moving thorughout an establishment.</label>
+    <%= form.label :ans1, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans1, 1.0%>
+
+    <%= form.label :ans1, "Important", value: 0.5 %>
+    <%= form.radio_button :ans1, 0.5%>
+
+    <%= form.label :ans1, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans1, 0.25 %>
+
+    <%= form.label :ans1, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans1, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>42) A person has few housing options that accomodate to their physical needs.</label>
+    <%= form.label :ans2, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans2, 1.0 %>
+
+    <%= form.label :ans2, "Important", value: 0.5 %>
+    <%= form.radio_button :ans2, 0.5 %>
+
+    <%= form.label :ans2, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans2, 0.25 %>
+
+    <%= form.label :ans2, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans2, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>43) A group of people are frustrated with someone for needing special accommodations or holding up lines. </label>
+    <%= form.label :ans3, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans3, 1.0 %>
+
+    <%= form.label :ans3, "Important", value: 0.5 %>
+    <%= form.radio_button :ans3, 0.5 %>
+
+    <%= form.label :ans3, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans3, 0.25 %>
+
+    <%= form.label :ans3, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans3, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>44) A person with disabilities loses their job due to missing work for medical appointments.</label>
+    <%= form.label :ans4, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans4, 1.0 %>
+
+    <%= form.label :ans4, "Important", value: 0.5 %>
+    <%= form.radio_button :ans4, 0.5 %>
+
+    <%= form.label :ans4, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans4, 0.25 %>
+
+    <%= form.label :ans4, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans4, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>45) A person with disabilities is in need of a home care provider.</label>
+    <%= form.label :ans5, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans5, 1.0 %>
+
+    <%= form.label :ans5, "Important", value: 0.5 %>
+    <%= form.radio_button :ans5, 0.5 %>
+
+    <%= form.label :ans5, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans5, 0.25 %>
+
+    <%= form.label :ans5, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans5, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>46) A person with disabilities is in need of mobility devices.</label>
+    <%= form.label :ans6, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans6, 1.0 %>
+
+    <%= form.label :ans6, "Important", value: 0.5 %>
+    <%= form.radio_button :ans6, 0.5 %>
+
+    <%= form.label :ans6, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans6, 0.25 %>
+
+    <%= form.label :ans6, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans6, 0.0 %>
+  </div>
+
+<p></p>
+
+  <div class="field">
+    <label>47) A child with disabilities gets ridiculed by their peers.</label>
+    <%= form.label :ans7, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans7, 1.0 %>
+
+    <%= form.label :ans7, "Important", value: 0.5 %>
+    <%= form.radio_button :ans7, 0.5 %>
+
+    <%= form.label :ans7, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans7, 0.25 %>
+
+    <%= form.label :ans7, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans7, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>48) An emloyee experiences job discrimination based on their disability.</label>
+    <%= form.label :ans8, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans8, 1.0 %>
+
+    <%= form.label :ans8, "Important", value: 0.5 %>
+    <%= form.radio_button :ans8, 0.5 %>
+
+    <%= form.label :ans8, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans8, 0.25 %>
+
+    <%= form.label :ans8, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans8, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>49) A student is segregated from their non-disabled peers as a result of special education classes.</label>
+    <%= form.label :ans9, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans9, 1.0 %>
+
+    <%= form.label :ans9, "Important", value: 0.5 %>
+    <%= form.radio_button :ans9, 0.5 %>
+
+    <%= form.label :ans9, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans9, 0.25 %>
+
+    <%= form.label :ans9, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans9, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>50) A person with disabilities is treated as helpless with any sort of task.</label>
+    <%= form.label :ans10, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans10, 1.0 %>
+
+    <%= form.label :ans10, "Important", value: 0.5 %>
+    <%= form.radio_button :ans10, 0.5 %>
+
+    <%= form.label :ans10, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans10, 0.25 %>
+
+    <%= form.label :ans10, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans10, 0.0 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit My Answers"%>
+  </div>
+<% end %>

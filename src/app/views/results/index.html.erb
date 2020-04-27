@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Results</h1>
 
 <p id="notice"><%= notice %></p>
@@ -11,18 +13,18 @@
 <%totals = [[obj1.countTotal, obj1], [obj2.countTotal, obj2], [obj3.countTotal, obj3], [obj4.countTotal, obj4], [obj5.countTotal, obj5]]%>
 
 
-<p>If you would like to modify a certain section of the quiz, you can do so by
-  clicking the 'Edit' button underneath the score of the section you wish to edit.</p>
+<h5>If you would like to modify a certain section of the quiz, you can do so by
+  clicking the 'Edit' button underneath the score of the section you wish to edit.</h5>
 <h2>Scores</h2>
-<table>
+
+<table class="table table-striped table-bordered">
   <thead>
-    <tr>
+    <tr class="bg-primary">
       <th>Class</th>
       <th>Race</th>
       <th>Gender</th>
       <th>Sexuality</th>
       <th>Disabilities</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -34,7 +36,7 @@
         <td><%= obj4.countTotal%>/10</td>
         <td><%= obj5.countTotal%>/10</td>
       </tr>
-      <tr>
+      <tr class="bg-info">
         <td><%= link_to 'Edit', edit_part1_path(@part1s[@part1s.length() - 1]) %></td>
         <td><%= link_to 'Edit', edit_part2_path(@part2s[@part2s.length() - 1]) %></td>
         <td><%= link_to 'Edit', edit_part3_path(@part3s[@part3s.length() - 1]) %></td>
@@ -46,7 +48,7 @@
 
 <%max = []%>
 
-
+<%#Find the top three highest scoring categories.%>
 <%for i in 0..2%>
   <%maxNUM = 0%>
   <%j = 0%>
@@ -64,7 +66,7 @@
   <%totals[index][0] = 0%>
 <%end%>
 
-
+<%#Output names, information and sources of the top three categories.%>
 <h2>Top 3 Categories</h2>
 <%max.each do |thisOBJ|%>
   <h3><%= thisOBJ.name%></h3>

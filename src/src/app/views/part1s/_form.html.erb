@@ -1,0 +1,185 @@
+<%= form_with(model: part1, local: true) do |form| %>
+  <% if part1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(part1.errors.count, "error") %> prohibited this part1 from being saved:</h2>
+
+      <ul>
+        <% part1.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>1) Parent(s)/Guardian(s) having to work nights/weekends to support their families.</label>
+    <%= form.label :ans1, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans1, 1.0%>
+
+    <%= form.label :ans1, "Important", value: 0.5 %>
+    <%= form.radio_button :ans1, 0.5%>
+
+    <%= form.label :ans1, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans1, 0.25 %>
+
+    <%= form.label :ans1, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans1, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>2) A kid gets picked on for the clothes they wear or the house they grew up in.</label>
+    <%= form.label :ans2, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans2, 1.0 %>
+
+    <%= form.label :ans2, "Important", value: 0.5 %>
+    <%= form.radio_button :ans2, 0.5 %>
+
+    <%= form.label :ans2, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans2, 0.25 %>
+
+    <%= form.label :ans2, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans2, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>3) A family has inadequate access to healthy food.</label>
+    <%= form.label :ans3, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans3, 1.0 %>
+
+    <%= form.label :ans3, "Important", value: 0.5 %>
+    <%= form.radio_button :ans3, 0.5 %>
+
+    <%= form.label :ans3, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans3, 0.25 %>
+
+    <%= form.label :ans3, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans3, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>4) Someone is unable to see a doctor whenever they feel like it.</label>
+    <%= form.label :ans4, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans4, 1.0 %>
+
+    <%= form.label :ans4, "Important", value: 0.5 %>
+    <%= form.radio_button :ans4, 0.5 %>
+
+    <%= form.label :ans4, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans4, 0.25 %>
+
+    <%= form.label :ans4, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans4, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>5) A student goes into debt after taking out loans for an education.</label>
+    <%= form.label :ans5, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans5, 1.0 %>
+
+    <%= form.label :ans5, "Important", value: 0.5 %>
+    <%= form.radio_button :ans5, 0.5 %>
+
+    <%= form.label :ans5, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans5, 0.25 %>
+
+    <%= form.label :ans5, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans5, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>6) A high school/college student gets a job while also pursuing an education.</label>
+    <%= form.label :ans6, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans6, 1.0 %>
+
+    <%= form.label :ans6, "Important", value: 0.5 %>
+    <%= form.radio_button :ans6, 0.5 %>
+
+    <%= form.label :ans6, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans6, 0.25 %>
+
+    <%= form.label :ans6, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans6, 0.0 %>
+  </div>
+
+<p></p>
+
+  <div class="field">
+    <label>7) A household has no access to a computer.</label>
+    <%= form.label :ans7, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans7, 1.0 %>
+
+    <%= form.label :ans7, "Important", value: 0.5 %>
+    <%= form.radio_button :ans7, 0.5 %>
+
+    <%= form.label :ans7, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans7, 0.25 %>
+
+    <%= form.label :ans7, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans7, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>8) Parent(s)/Guardian(s) without a college edcation.</label>
+    <%= form.label :ans8, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans8, 1.0 %>
+
+    <%= form.label :ans8, "Important", value: 0.5 %>
+    <%= form.radio_button :ans8, 0.5 %>
+
+    <%= form.label :ans8, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans8, 0.25 %>
+
+    <%= form.label :ans8, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans8, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>9) Parent(s)/Guardian(s) having been laid off or unemployed NOT by choice.</label>
+    <%= form.label :ans9, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans9, 1.0 %>
+
+    <%= form.label :ans9, "Important", value: 0.5 %>
+    <%= form.radio_button :ans9, 0.5 %>
+
+    <%= form.label :ans9, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans9, 0.25 %>
+
+    <%= form.label :ans9, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans9, 0.0 %>
+  </div>
+
+  <p></p>
+
+  <div class="field">
+    <label>10) A low-income community is susceptible to environmental toxins.</label>
+    <%= form.label :ans10, "Very Important", value: 1.0 %>
+    <%= form.radio_button :ans10, 1.0 %>
+
+    <%= form.label :ans10, "Important", value: 0.5 %>
+    <%= form.radio_button :ans10, 0.5 %>
+
+    <%= form.label :ans10, "Unimportant", value: 0.25 %>
+    <%= form.radio_button :ans10, 0.25 %>
+
+    <%= form.label :ans10, "Very Unimportant", value: 0.0 %>
+    <%= form.radio_button :ans10, 0.0 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Next"%>
+  </div>
+<% end %>

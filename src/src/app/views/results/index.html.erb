@@ -1,0 +1,82 @@
+<h1>Results</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%obj1 = Part1sController.new()%>
+<%obj2 = Part2sController.new()%>
+<%obj3 = Part3sController.new()%>
+<%obj4 = Part4sController.new()%>
+<%obj5 = Part5sController.new()%>
+
+<%totals = [[obj1.countTotal, obj1], [obj2.countTotal, obj2], [obj3.countTotal, obj3], [obj4.countTotal, obj4], [obj5.countTotal, obj5]]%>
+
+
+<p>If you would like to modify a certain section of the quiz, you can do so by
+  clicking the 'Edit' button underneath the score of the section you wish to edit.</p>
+<h2>Scores</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Race</th>
+      <th>Gender</th>
+      <th>Sexuality</th>
+      <th>Disabilities</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= obj1.countTotal %>/10</td>
+        <td><%= obj2.countTotal%>/10</td>
+        <td><%= obj3.countTotal%>/10</td>
+        <td><%= obj4.countTotal%>/10</td>
+        <td><%= obj5.countTotal%>/10</td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Edit', edit_part1_path(@part1s[@part1s.length() - 1]) %></td>
+        <td><%= link_to 'Edit', edit_part2_path(@part2s[@part2s.length() - 1]) %></td>
+        <td><%= link_to 'Edit', edit_part3_path(@part3s[@part3s.length() - 1]) %></td>
+        <td><%= link_to 'Edit', edit_part4_path(@part4s[@part4s.length() - 1]) %></td>
+        <td><%= link_to 'Edit', edit_part5_path(@part5s[@part5s.length() - 1]) %></td>
+      </tr>
+  </tbody>
+</table>
+
+<%max = []%>
+
+
+<%for i in 0..2%>
+  <%maxNUM = 0%>
+  <%j = 0%>
+  <%index = 0%>
+  <%maxOBJ = totals[0][1]%>
+  <%totals.each do |total|%>
+    <%if total[0] > maxNUM%>
+      <%maxNUM = total[0]%>
+      <%maxOBJ = total[1]%>
+      <%index = j%>
+    <%end%>
+    <%j = j + 1%>
+  <%end%>
+  <%max.append(maxOBJ)%>
+  <%totals[index][0] = 0%>
+<%end%>
+
+
+<h2>Top 3 Categories</h2>
+<%max.each do |thisOBJ|%>
+  <h3><%= thisOBJ.name%></h3>
+
+  <p><%= thisOBJ.information%></p>
+
+  <p>For more information on this topic, check out these sources:</p>
+  <%i = 0%>
+  <%thisOBJ.sources.each do |source|%>
+    <%= link_to thisOBJ.sourceTitle[i], source, :target => "_blank" %>
+    <br>
+    <%i = i + 1%>
+  <%end%>
+<%end%>
+
