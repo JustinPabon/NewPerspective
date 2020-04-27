@@ -1,2 +1,4 @@
 # NewPerspective
 A web application that assesses social issues that students should look into for volunteer work.
+The user is given a series of statements and enters the extent with which they believe it is important to them (Very important, important, unimportant or very unimportant). These statements will be categorized based on one of five types of social issues: socio-economic status, race, gender, sexuality and physical/mental disabilities.
+How the user answers will be represented as a number on a scale of -1 to 1, where -1 represents least important and 1 represents most important. Once the user submits their answers, the application will tally up the amount of points they have in each category. The results page will display the user’s scores and provide information about the social issue(s) the user is shown to be the most interested in.
